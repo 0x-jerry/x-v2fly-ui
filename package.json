@@ -11,7 +11,7 @@
     "release": "glib release"
   },
   "dependencies": {
-    "@0x-jerry/lib": "^0.9.0",
+    "@0x-jerry/lib": "^0.9.5",
     "@0x-jerry/v-text": "^0.1.3",
     "@vue/reactivity": "^3.2.6",
     "vue": "^3.2.6"
