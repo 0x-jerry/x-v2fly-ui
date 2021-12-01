@@ -1,4 +1,4 @@
-import { Socket, ProtocolClient, ProtocolData } from '@0x-jerry/lib'
+import { Socket, ProtocolClient } from '@0x-jerry/lib'
 
 export const socket = new Socket('ws://127.0.0.1:7999')
 
@@ -16,7 +16,6 @@ export function stop() {
   client.send('start-v2fly')
 }
 
-export async function getConf() {
-  const res: ProtocolData = await client.send('get-v2fly-conf')
-  return res.data
+export function getConf() {
+  return client.send('get-v2fly-conf')
 }
