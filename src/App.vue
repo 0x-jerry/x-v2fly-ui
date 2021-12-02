@@ -4,16 +4,16 @@ import { onMounted, reactive, watchEffect } from 'vue'
 
 const appSize = {
   w: '800px',
-  h: '600px'
+  h: '600px',
 }
 
 const conf = reactive({
   port: '7999',
-  b64: ''
+  b64: '',
 })
 
 onMounted(async () => {
-  const d: any = await getConf()
+  const d = await getConf()
   conf.b64 = d.b64
 })
 
@@ -36,13 +36,7 @@ function startService() {
       <div class="size">
         <div flex="~" justify="end" items="center">
           <span m="x-2">Port: </span>
-          <TInput
-            placeholder="port"
-            type="number"
-            v-model="conf.port"
-            disabled
-            m="x-2"
-          />
+          <TInput placeholder="port" type="number" v-model="conf.port" disabled m="x-2" />
         </div>
         <hr m="y-2" />
         <div flex="~ col">
